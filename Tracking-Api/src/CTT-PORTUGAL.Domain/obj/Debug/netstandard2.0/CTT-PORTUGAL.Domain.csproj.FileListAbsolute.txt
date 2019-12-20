@@ -1,0 +1,17 @@
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\bin\Debug\netstandard2.0\CTT-PORTUGAL.Domain.deps.json
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\bin\Debug\netstandard2.0\CTT-PORTUGAL.Domain.dll
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\bin\Debug\netstandard2.0\CTT-PORTUGAL.Domain.pdb
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.csprojAssemblyReference.cache
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.csproj.CoreCompileInputs.cache
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.AssemblyInfoInputs.cache
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.AssemblyInfo.cs
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.dll
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.pdb
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\bin\Debug\netstandard2.0\CTT-PORTUGAL.Domain.deps.json
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\bin\Debug\netstandard2.0\CTT-PORTUGAL.Domain.dll
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\bin\Debug\netstandard2.0\CTT-PORTUGAL.Domain.pdb
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.csprojAssemblyReference.cache
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.AssemblyInfoInputs.cache
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.AssemblyInfo.cs
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.dll
+C:\Repo\CTT-PORTUGAL\src\CTT-PORTUGAL.Domain\obj\Debug\netstandard2.0\CTT-PORTUGAL.Domain.pdb

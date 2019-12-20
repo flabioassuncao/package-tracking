@@ -1,0 +1,6 @@
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Infra.Identity\bin\Debug\netstandard2.0\CTT-PORTUGAL.Infra.Identity.deps.json
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Infra.Identity\bin\Debug\netstandard2.0\CTT-PORTUGAL.Infra.Identity.dll
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Infra.Identity\obj\Debug\netstandard2.0\CTT-PORTUGAL.Infra.Identity.csprojAssemblyReference.cache
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Infra.Identity\obj\Debug\netstandard2.0\CTT-PORTUGAL.Infra.Identity.csproj.CoreCompileInputs.cache
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Infra.Identity\obj\Debug\netstandard2.0\CTT-PORTUGAL.Infra.Identity.AssemblyInfoInputs.cache
+E:\Repos\CTT-Portugal\CTT-PORTUGAL\src\CTT-PORTUGAL.Infra.Identity\obj\Debug\netstandard2.0\CTT-PORTUGAL.Infra.Identity.AssemblyInfo.cs
