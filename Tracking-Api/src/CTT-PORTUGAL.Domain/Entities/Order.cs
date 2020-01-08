@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace CTT_PORTUGAL.Domain.Entities
 {
@@ -8,32 +6,32 @@ namespace CTT_PORTUGAL.Domain.Entities
     {
         public Order()
         {
-            HistoricoStatus = new List<StatusOrder>();
+            StatusHistory = new List<StatusOrder>();
         }
 
-        public string CodigoRastreio { get; set; }
+        public string CodeTracking { get; set; }
 
-        public string De { get; set; }
-        public string DeLocal { get; set; }
-        public string DeData { get; set; }
-        public string DeHora { get; set; }
+        public string From { get; set; }
+        public string FromLocal { get; set; }
+        public string FromDate { get; set; }
+        public string FromHour { get; set; }
 
-        public string UltimoLocal { get; set; }
-        public string UltimaData { get; set; }
-        public string UltimaHora { get; set; }
+        public string LastLocal { get; set; }
+        public string LastDate { get; set; }
+        public string LastHour { get; set; }
 
-        public string Para { get; set; }
-        public string ParaLocal { get; set; }
-        public string ParaData { get; set; }
-        public string ParaHora { get; set; }
+        public string To { get; set; }
+        public string ToLocal { get; set; }
+        public string ToDate { get; set; }
+        public string ToHour { get; set; }
 
-        public string UltimoAttCodigo { get; set; }
-        public string UltimoAttProduto { get; set; }
-        public string UltimoAttData { get; set; }
-        public string UltimoAttHora { get; set; }
-        public string UltimoAttEstado { get; set; }
+        public string LastCodeUpdate { get; set; }
+        public string LastProductUpdate { get; set; }
+        public string LastDateUpdate { get; set; }
+        public string LastHourUpdate { get; set; }
+        public string LastStatusUpdate { get; set; }
 
-        public virtual List<StatusOrder> HistoricoStatus { get; set; }
+        public virtual ICollection<StatusOrder> StatusHistory { get; set; }
 
     }
 }

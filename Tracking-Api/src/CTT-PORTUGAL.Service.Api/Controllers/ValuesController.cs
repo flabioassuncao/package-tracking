@@ -24,7 +24,7 @@ namespace CTT_PORTUGAL.Service.Api.Controllers
         public ActionResult<string> Get(string id)
         {
             var order = new Order();
-            order.CodigoRastreio = id;
+            order.CodeTracking = id;
 
             //FA097026122PT
             string url = $"http://www.cttexpresso.pt/feapl_2/app/open/cttexpresso/objectSearch/objectSearch.jspx?objects={id}";
@@ -41,25 +41,25 @@ namespace CTT_PORTUGAL.Service.Api.Controllers
 
             html.LoadHtml(webCliente.DownloadString(url));
 
-            order.De = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[1]").First().InnerText);
-            order.DeLocal = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[2]/span[2]").First().InnerText);
-            order.DeData = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[3]/span").First().InnerText);
-            order.DeHora = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[4]/span").First().InnerText);
+            order.From = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[1]").First().InnerText);
+            order.FromLocal = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[2]/span[2]").First().InnerText);
+            order.FromDate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[3]/span").First().InnerText);
+            order.FromHour = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[1]/p[4]/span").First().InnerText);
 
-            order.UltimoLocal = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[2]/p[1]/span[2]").First().InnerText);
-            order.UltimaData = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[2]/p[2]/span").First().InnerText);
-            order.UltimaHora = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[2]/p[3]/span").First().InnerText);
+            order.LastLocal = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[2]/p[1]/span[2]").First().InnerText);
+            order.LastDate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[2]/p[2]/span").First().InnerText);
+            order.LastHour = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[2]/p[3]/span").First().InnerText);
 
-            order.Para = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[1]").First().InnerText);
-            order.ParaLocal = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[2]/span[2]").First().InnerText);
-            order.ParaData = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[3]/span").First().InnerText);
-            order.ParaHora = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[4]/span").First().InnerText);
+            order.To = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[1]").First().InnerText);
+            order.ToLocal = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[2]/span[2]").First().InnerText);
+            order.ToDate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[3]/span").First().InnerText);
+            order.ToHour = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"vanInfo\"]/div[3]/p[4]/span").First().InnerText);
 
-            order.UltimoAttCodigo = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[1]").First().InnerText);
-            order.UltimoAttProduto = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[2]").First().InnerText);
-            order.UltimoAttData = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[3]").First().InnerText);
-            order.UltimoAttHora = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[4]").First().InnerText);
-            order.UltimoAttEstado = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[5]/a").First().InnerText);
+            order.LastCodeUpdate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[1]").First().InnerText);
+            order.LastProductUpdate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[2]").First().InnerText);
+            order.LastDateUpdate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[3]").First().InnerText);
+            order.LastHourUpdate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[4]").First().InnerText);
+            order.LastStatusUpdate = removeTrash(html.DocumentNode.SelectNodes("//*[@id=\"objectSearchResult\"]/table/tr[1]/td[5]/a").First().InnerText);
 
             HtmlDocument htmlDoc = new HtmlDocument();
             var webGet = new HtmlWeb();
@@ -90,23 +90,23 @@ namespace CTT_PORTUGAL.Service.Api.Controllers
                                 {
                                     if (countLegal == 0)
                                     {
-                                        historico.UltimoAttHora = removeTrash(item.InnerText);
+                                        historico.Hour = removeTrash(item.InnerText);
                                     }
                                     else if (countLegal == 1)
                                     {
-                                        historico.UltimoAttEstado = removeTrash(item.InnerText);
+                                        historico.Status = removeTrash(item.InnerText);
                                     }
                                     else if (countLegal == 2)
                                     {
-                                        historico.UltimoAttMotivo = removeTrash(item.InnerText);
+                                        historico.Reason = removeTrash(item.InnerText);
                                     }
                                     else if (countLegal == 3)
                                     {
-                                        historico.UltimoAttLocal = removeTrash(item.InnerText);
+                                        historico.Local = removeTrash(item.InnerText);
                                     }
                                     else if (countLegal == 4)
                                     {
-                                        historico.UltimoAttRecetor = removeTrash(item.InnerText);
+                                        historico.Receiver = removeTrash(item.InnerText);
                                     }
 
                                     var itemjss = removeTrash(item.InnerText);
@@ -127,23 +127,23 @@ namespace CTT_PORTUGAL.Service.Api.Controllers
                             {
                                 if (xx == 0)
                                 {
-                                    historico.UltimoAttHora = removeTrash(algo.ChildNodes[i].InnerText);
+                                    historico.Hour = removeTrash(algo.ChildNodes[i].InnerText);
                                 }
                                 else if (xx == 2)
                                 {
-                                    historico.UltimoAttEstado = removeTrash(algo.ChildNodes[i].InnerText);
+                                    historico.Status = removeTrash(algo.ChildNodes[i].InnerText);
                                 }
                                 else if (xx == 4)
                                 {
-                                    historico.UltimoAttMotivo = removeTrash(algo.ChildNodes[i].InnerText);
+                                    historico.Reason = removeTrash(algo.ChildNodes[i].InnerText);
                                 }
                                 else if (xx == 6)
                                 {
-                                    historico.UltimoAttLocal = removeTrash(algo.ChildNodes[i].InnerText);
+                                    historico.Local = removeTrash(algo.ChildNodes[i].InnerText);
                                 }
                                 else if (xx == 8)
                                 {
-                                    historico.UltimoAttRecetor = removeTrash(algo.ChildNodes[i].InnerText);
+                                    historico.Receiver = removeTrash(algo.ChildNodes[i].InnerText);
                                 }
                                 var teste = removeTrash(algo.ChildNodes[i].InnerText);
                             }
@@ -152,10 +152,10 @@ namespace CTT_PORTUGAL.Service.Api.Controllers
                         }
                     }
 
-                    if (!string.IsNullOrEmpty(historico.UltimoAttEstado))
+                    if (!string.IsNullOrEmpty(historico.Status))
                     {
-                        historico.Data = date;
-                        order.HistoricoStatus.Add(historico);
+                        historico.Date = date;
+                        order.StatusHistory.Add(historico);
                     }
                 }
             }
